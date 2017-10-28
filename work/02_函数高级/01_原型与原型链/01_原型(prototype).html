@@ -13,7 +13,24 @@
   * 作用: 函数的所有实例对象自动拥有原型中的属性(方法)
 -->
 <script type="text/javascript">
+  // 每个函数都有一个prototype属性, 它默认指向一个Object空对象(即称为: 原型对象)
+  console.log(Date.prototype)
+  function Fn() {
+    
+  }
+  console.log(Fn.prototype)
 
+  // 原型对象中有一个属性constructor, 它指向函数对象
+  console.log(Date.prototype.constructor, Fn.prototype.constructor)
+
+  //给原型对象添加属性(一般都是方法)
+  Fn.prototype.test = function () {
+    console.log('test()')
+  }
+
+  // Fn.prototype.test() // 一般不会直接这么调用
+  var fn = new Fn()
+  fn.test()
 </script>
 </body>
 </html>
