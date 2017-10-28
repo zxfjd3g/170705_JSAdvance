@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_对象3_面试题</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  var a = {}
+  var obj1 = {n: 2}
+  var obj2 = {m: 3}
+  a[obj1] = 4
+  a[obj2] = 5  // 不会新增属性
+  console.log(a[obj1]) // 输出多少?
+  console.log(a)  //{'[object Object]': 5}
+  console.log(obj1.toString(), obj1.toString()===obj2.toString())
+
+  var arr1 = [2, 3]
+  var arr2 = [3, 4]
+  a[arr1] = 6
+  a[arr2] = 7
+  console.log(a[arr1], a[arr2])
+  console.log(arr1.toString(), arr2.toString())
+
+
+</script>
+</body>
+</html>
