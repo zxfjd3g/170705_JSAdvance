@@ -35,6 +35,10 @@
   // 让子类原型对象构造器属性指向子类
   Child.prototype.constructor = Child
 
+  Child.prototype.showCProp = function () {
+    console.log('showCProp()', this.cProp)
+  }
+
 
   var child = new Child()
   child.showPProp()
