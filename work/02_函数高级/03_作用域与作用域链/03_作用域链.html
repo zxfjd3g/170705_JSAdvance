@@ -15,7 +15,20 @@
   * 再次执行2的相同操作, 直到全局作用域, 如果还找不到就抛出找不到的异常
 -->
 <script type="text/javascript">
+  var a = 2;
+  function fn1() {
+    var b = 3;
+    function fn2() {
+      var c = 4;
+      console.log(c);
+      console.log(b);
+      console.log(a);
+      console.log(d);
+    }
 
+    fn2();
+  }
+  fn1();
 </script>
 
 </body>
